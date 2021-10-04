@@ -48,4 +48,8 @@
 	}
 	function destr_u ()  {
 		echo ("destr_u ::");
-	}				
+	}
+
+    function inscription() {
+        require("modele/inscriptionBD.php");
+    }
