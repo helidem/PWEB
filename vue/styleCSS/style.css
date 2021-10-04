@@ -1,0 +1,19 @@
+//style pour la page dont le menu
+
+*{	
+	margin:0;padding:0;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size : 12pt;
+}
+
+nav {
+	display:block; 
+	width: 40% ; 
+	height: 300;
+	padding-top : 5%;
+	padding-bottom : 5%;
+	list-style-type: none;
+}
+
+nav h2 {color:blue;}
