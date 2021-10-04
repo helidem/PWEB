@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {	
+	margin:0;padding:0;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size : 12pt;
+}
+form {
+	margin-left:5em;
+	display:block; 
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size : 14pt;
+}
+label {
+	float:left; 
+	height:1.5em;
+	width:5em;
+}
+input {
+	display:block; 
+	height:1.5em;
+}
+input.nom {width:15em;}
+input.num {width:8em;}
+div#m {color:red;}
