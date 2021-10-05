@@ -5,7 +5,7 @@
 	
 	function contacts($idn) {
 		require ("Modele/connectBD.php") ; 
-		$sql="SELECT nom, prenom, email FROM contact c, utilisateur u 
+		$sql="SELECT c.id_nom, nom, prenom, email FROM contact c, utilisateur u 
 		WHERE c.id_nom=:id_nom AND c.id_contact = u.id_nom
 		LIMIT 0,30"; // LIMIT ne marche pas en MS SQL SERVER
 		try {
@@ -15,6 +15,7 @@
 			$C= array();
 			if ($bool) {
 				while ($c = $commande->fetch()) {
+
 					$C[] = $c; //stockage dans $C des enregistrements sélectionnés
 				}	
 			}
