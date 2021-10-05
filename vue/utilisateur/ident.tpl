@@ -14,6 +14,7 @@
 	<input name="num" class="num" value="<?php echo $num ?>" />
 	<input type="submit" value="ok" />
 </form>
+<button onclick="window.location.href='index.php?controle=utilisateur&action=inscription'">Inscription</button>
 <div id="m"><?php echo $msg; ?></div>
 </body>
 </html>

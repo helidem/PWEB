@@ -13,6 +13,7 @@
     <input name="num" type="text" value="<?php echo $num;?>" /> Matricule <br />
     <input type="submit" value="soumettre" />
 </form>
+<button onclick="window.location.href='index.php?controle=utilisateur&action=ident'">Connexion</button>
 <div><?php echo $msg; ?></div>
 </body>
 </html>

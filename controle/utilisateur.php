@@ -14,9 +14,6 @@
 			require ("./modele/utilisateurBD.php");
 			
 			if (verif_bd($nom, $num, $profil)) {
-				//echo ('<br/>PROFIL : <pre>'); var_dump ($profil); echo ('</pre><br/>'); die("ident");
-				
-				//session_start(); //deja fait dans index
 				$_SESSION['profil'] = $profil;
 				$nexturl = "index.php?controle=utilisateur&action=accueil";
 				header ("Location:" . $nexturl);
@@ -66,8 +63,11 @@
                 require("vue/utilisateur/inscription.tpl");
             }else{
                 create_new($nom,$num,$prenom,$email,$profil);
-               // $nexturl = "index.php?controle=utilisateur&action=accueil";
-               // header ("Location:" . $nexturl);
+                require ("./modele/utilisateurBD.php");
+                verif_bd($nom,$num,$profil);
+                $_SESSION['profil'] = $profil;
+                $nexturl = "index.php?controle=utilisateur&action=accueil";
+                header ("Location:" . $nexturl);
             }
         }
     }

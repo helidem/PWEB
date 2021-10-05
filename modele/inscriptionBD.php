@@ -31,7 +31,6 @@ function verif_existant ($email) {
             while ($ligne = $commande->fetch()) { // ligne par ligne
                 print_r($ligne);
             }
-
         }
 
         if (count($resultat)== 0) return false;
@@ -43,4 +42,5 @@ function verif_existant ($email) {
         die(); // On arrête tout.
     }
 }
+
 ?>
