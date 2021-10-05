@@ -16,10 +16,11 @@
 				if ($Contact != false) {
 					echo ("<h2 style='color:blue'> Voici vos contacts :</h2>");
 					echo ('<table>');
-					echo ('<tr><th> NOM </th> <th> PRENOM </th> <th> EMAIL </th></tr>'); 	
+					echo ('<tr><th> NOM </th> <th> PRENOM </th> <th> EMAIL </th></tr>');
 					foreach ($Contact as $c) {
+
 						echo "<tr class='contact' >";
-						echo ("<td> <a href='index.php?controle=contact&action=liste_contacts&id='" . $c[0] . ">" . $c['nom'] . "</a></td>"); // utf8_encode($c['nom'] si nécessaire
+						echo ("<td><a href='index.php?controle=contact&action=liste_contacts&id=$c[0]'>" . $c['nom'] . "</a></td>"); // utf8_encode($c['nom'] si nécessaire
 						echo ("<td>" . $c['prenom'] . "</td>"); 
 						echo ("<td>" . $c['email'] . "</td>"); 
 						echo "</tr>\n";
