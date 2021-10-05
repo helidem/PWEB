@@ -54,21 +54,20 @@
         $nom=  isset($_POST['nom'])?($_POST['nom']):'';
         $prenom=  isset($_POST['prenom'])?($_POST['prenom']):'';
         $num=  isset($_POST['num'])?($_POST['num']):'';
-        $mail=  isset($_POST['email'])?($_POST['email']):'';
+        $email=  isset($_POST['email'])?($_POST['email']):'';
         $msg='';
-
 
         if (count($_POST)==0) require("vue/utilisateur/inscription.tpl");
         else{
             require("modele/inscriptionBD.php");
 
-            if(verif_existant($mail)){
+            if(verif_existant($email)){
                 $msg = "Utilisateur existant !";
                 require("vue/utilisateur/inscription.tpl");
             }else{
-                create_new($nom,$num,$prenom,$mail,$profil);
-
-
+                create_new($nom,$num,$prenom,$email,$profil);
+               // $nexturl = "index.php?controle=utilisateur&action=accueil";
+               // header ("Location:" . $nexturl);
             }
         }
     }
